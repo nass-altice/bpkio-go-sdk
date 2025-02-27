@@ -8,6 +8,7 @@ type ServiceOutput struct {
 	Url             string   `json:"url"`
 	UpdateDate      string   `json:"updateDate"`
 	CreationDate    string   `json:"creationDate"`
+	State           string   `json:"state"`
 }
 
 func (client BroadpeakClient) GetAllServices(offset uint, limit uint) ([]ServiceOutput, error) {
