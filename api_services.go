@@ -2,7 +2,7 @@ package broadpeakio
 
 type ServiceOutput struct {
 	Name            string   `json:"name"`
-	EnvironmentTags []string `json:"environmentTags"`
+	EnvironmentTags []string `json:"tags"`
 	Id              uint     `json:"id"`
 	Type            string   `json:"type"`
 	Url             string   `json:"url"`
