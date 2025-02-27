@@ -56,7 +56,7 @@ type TranscodingProfile struct {
 
 type LiveAdPreRollOutput struct {
 	AdServer    AdServer `json:"adServer,omitempty"`
-	MaxDuration string   `json:"maxDuration"`
+	MaxDuration uint     `json:"maxDuration"`
 	Offset      uint     `json:"offset"`
 }
 
