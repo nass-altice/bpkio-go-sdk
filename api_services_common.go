@@ -28,6 +28,11 @@ type LiveAdPreRoll struct {
 type LiveAdReplacement struct {
 	AdServer  *Identifiable `json:"adServer,omitempty"` //required
 	GapFiller *Identifiable `json:"gapFiller,omitempty"`
+	SpotAware SpotAware     `json:"spotAware,omitempty"`
+}
+
+type SpotAware struct {
+	Mode string `json:"mode,omitempty"`
 }
 
 type VodAdInsertion struct {
