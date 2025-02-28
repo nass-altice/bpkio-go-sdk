@@ -34,18 +34,18 @@ type VodAdInsertion struct {
 	AdServer *Identifiable `json:"adServer,omitempty"` //required
 }
 
-type QueryParams struct {
+type QueryParam struct {
 	Name  string `json:"name"`
 	Value string `json:"url"`
 	Type  string `json:"type"`
 }
 
 type AdServer struct {
-	Id      uint          `json:"id"`
-	Name    string        `json:"name"`
-	Url     string        `json:"url"`
-	Type    string        `json:"type"`
-	Queries []QueryParams `json:"queries"`
+	Id              uint         `json:"id"`
+	Name            string       `json:"name"`
+	Url             string       `json:"url"`
+	Type            string       `json:"type"`
+	QueryParameters []QueryParam `json:"queryParameters"`
 }
 
 type Source struct {
