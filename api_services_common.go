@@ -49,6 +49,23 @@ type AdServer struct {
 }
 
 type Source struct {
+	Id     uint   `json:"id"`
+	Name   string `json:"name"`
+	Url    string `json:"url"`
+	Type   string `json:"type"`
+	Origin Origin `json:"origin"`
+}
+
+type Origin struct {
+	CustomHeaders []CustomHeader `json:"customHeaders"`
+}
+
+type CustomHeader struct {
+	Name  string `json:"name"`
+	Value string `json:"value"`
+}
+
+type GapFiller struct {
 	Id   uint   `json:"id"`
 	Name string `json:"name"`
 	Url  string `json:"url"`
@@ -68,13 +85,13 @@ type LiveAdPreRollOutput struct {
 }
 
 type LiveAdReplacementOutput struct {
-	AdServer  AdServer `json:"adServer"`
-	GapFiller Source   `json:"gapFiller"`
+	AdServer  AdServer  `json:"adServer"`
+	GapFiller GapFiller `json:"gapFiller"`
 }
 
 type AdBreakInsertionOutput struct {
-	AdServer  AdServer `json:"adServer"`
-	GapFiller Source   `json:"gapFiller"`
+	AdServer  AdServer  `json:"adServer"`
+	GapFiller GapFiller `json:"gapFiller"`
 }
 
 type VodAdInsertionOutput struct {
