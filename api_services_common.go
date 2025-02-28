@@ -92,11 +92,13 @@ type LiveAdPreRollOutput struct {
 type LiveAdReplacementOutput struct {
 	AdServer  AdServer  `json:"adServer"`
 	GapFiller GapFiller `json:"gapFiller"`
+	SpotAware SpotAware `json:"spotAware"`
 }
 
 type AdBreakInsertionOutput struct {
 	AdServer  AdServer  `json:"adServer"`
 	GapFiller GapFiller `json:"gapFiller"`
+	SpotAware SpotAware `json:"spotAware"`
 }
 
 type VodAdInsertionOutput struct {
