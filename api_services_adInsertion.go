@@ -35,7 +35,7 @@ type AuthorizationHeader struct {
 }
 
 type AdvancedOptions struct {
-	AuthorizationHeader AuthorizationHeader `json:"authorizationHeader,omitempty"`
+	AuthorizationHeader *AuthorizationHeader `json:"authorizationHeader,omitempty"`
 }
 
 type AdInsertionOutput struct {
@@ -49,7 +49,7 @@ type AdInsertionOutput struct {
 	TranscodingProfile   TranscodingProfile      `json:"transcodingProfile"`
 	EnableAdTranscoding  bool                    `json:"enableAdTranscoding"`
 	ServerSideAdTracking ServerSideAdTracking    `json:"serverSideAdTracking"`
-	AdvancedOptions      AdvancedOptions         `json:"advancedOptions"`
+	AdvancedOptions      *AdvancedOptions        `json:"advancedOptions"`
 	Source               Source                  `json:"source"`
 	Id                   uint                    `json:"id"`
 	CreationDate         string                  `json:"creationDate"`
