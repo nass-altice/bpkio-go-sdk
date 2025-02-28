@@ -29,17 +29,8 @@ type UpdateAdInsertionInput struct {
 	ServerSideAdTracking *ServerSideAdTracking `json:"serverSideAdTracking,omitempty"`
 }
 
-type AuthorizationHeader struct {
-	Name  string `json:"name,omitempty"`
-	Value string `json:"value,omitempty"`
-}
-
-type AdvancedOptions struct {
-	AuthorizationHeader *AuthorizationHeader `json:"authorizationHeader,omitempty"`
-}
-
 type AdInsertionOutput struct {
-	Name                 string                  `json:"name,omitempty"`
+	Name                 string                  `json:"name"`
 	Tags                 []string                `json:"tags,omitempty"`
 	Type                 string                  `json:"type"`
 	State                string                  `json:"state"`
@@ -49,7 +40,7 @@ type AdInsertionOutput struct {
 	TranscodingProfile   TranscodingProfile      `json:"transcodingProfile"`
 	EnableAdTranscoding  bool                    `json:"enableAdTranscoding"`
 	ServerSideAdTracking ServerSideAdTracking    `json:"serverSideAdTracking"`
-	AdvancedOptions      *AdvancedOptions        `json:"advancedOptions"`
+	AdvancedOptions      json.RawMessage         `json:"advancedOptions"`
 	Source               Source                  `json:"source"`
 	Id                   uint                    `json:"id"`
 	CreationDate         string                  `json:"creationDate"`
