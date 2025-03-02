@@ -7,19 +7,20 @@ import (
 )
 
 type LiveInput struct {
-	Name        string `json:"name,omitempty"` //req
-	Url         string `json:"url,omitempty"`  //req
-	Description string `json:"description,omitempty"`
-	BackupIp    string `json:"backupIp,omitempty"`
+	Name     string `json:"name,omitempty"` //req
+	Url      string `json:"url,omitempty"`  //req
+	BackupIp string `json:"backupIp,omitempty"`
+	Origin   Origin `json:"origin"`
 }
 
 type LiveOutput struct {
-	Name        string `json:"name"`
-	Description string `json:"description"`
-	Url         string `json:"url"`
-	BackupIp    string `json:"backupIp"`
-	Format      string `json:"format"`
-	Id          uint   `json:"id"`
+	Name     string `json:"name"`
+	Url      string `json:"url"`
+	BackupIp string `json:"backupIp"`
+	Format   string `json:"format"`
+	Type     string `json:"type"`
+	Origin   Origin `json:"origin"`
+	Id       uint   `json:"id"`
 }
 
 func (client BroadpeakClient) CreateLive(options LiveInput) (LiveOutput, error) {
