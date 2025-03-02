@@ -16,6 +16,7 @@ type SlateOutput struct {
 	Id          uint   `json:"id"`
 	Name        string `json:"name"`
 	Url         string `json:"url"`
+	Type        string `json:"type"`
 	Description string `json:"description"`
 	Format      string `json:"format"`
 }
