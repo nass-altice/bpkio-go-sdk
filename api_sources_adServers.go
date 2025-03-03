@@ -11,7 +11,7 @@ type AdServerInput struct {
 	Url             string       `json:"url,omitempty"`  //req
 	Description     string       `json:"description,omitempty"`
 	Queries         string       `json:"queries,omitempty"`
-	QueryParameters []QueryParam `json:"queryParameters,omitempty"`
+	QueryParameters []QueryParam `json:"queryParameters"`
 	Template        string       `json:"template,omitempty"` //req
 }
 
