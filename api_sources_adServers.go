@@ -7,11 +7,12 @@ import (
 )
 
 type AdServerInput struct {
-	Name        string `json:"name,omitempty"` //req
-	Url         string `json:"url,omitempty"`  //req
-	Description string `json:"description,omitempty"`
-	Queries     string `json:"queries,omitempty"`
-	Template    string `json:"template,omitempty"` //req
+	Name            string       `json:"name,omitempty"` //req
+	Url             string       `json:"url,omitempty"`  //req
+	Description     string       `json:"description,omitempty"`
+	Queries         string       `json:"queries,omitempty"`
+	QueryParameters []QueryParam `json:"queryParameters,omitempty"`
+	Template        string       `json:"template,omitempty"` //req
 }
 
 type AdServerOutput struct {

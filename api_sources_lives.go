@@ -19,11 +19,11 @@ type LiveOutput struct {
 	Name        string `json:"name"`
 	Url         string `json:"url"`
 	BackupIp    string `json:"backupIp"`
+	Description string `json:"description"`
+	MultiPeriod bool   `json:"multiPeriod"`
 	Format      string `json:"format"`
 	Type        string `json:"type"`
 	Origin      Origin `json:"origin"`
-	Description string `json:"description"`
-	MultiPeriod bool   `json:"multiPeriod"`
 	Id          uint   `json:"id"`
 }
 
