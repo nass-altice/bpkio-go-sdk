@@ -41,7 +41,7 @@ type VodAdInsertion struct {
 
 type QueryParam struct {
 	Name  string `json:"name"`
-	Value string `json:"url"`
+	Value string `json:"value"`
 	Type  string `json:"type"`
 }
 
