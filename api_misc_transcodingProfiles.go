@@ -3,9 +3,10 @@ package broadpeakio
 import "fmt"
 
 type TranscodingProfileOutput struct {
-	Name    string `json:"name"`
-	Content string `json:"content"`
-	Id      uint   `json:"id"`
+	Name       string `json:"name"`
+	Content    string `json:"content"`
+	Id         uint   `json:"id"`
+	InternalId string `json:"internalId"`
 }
 
 func (client BroadpeakClient) GetAllTranscodingProfiles(offset uint, limit uint) ([]TranscodingProfileOutput, error) {
