@@ -54,11 +54,14 @@ type AdServer struct {
 }
 
 type Source struct {
-	Id     uint   `json:"id"`
-	Name   string `json:"name"`
-	Url    string `json:"url"`
-	Type   string `json:"type"`
-	Origin Origin `json:"origin"`
+	Id          uint   `json:"id"`
+	Name        string `json:"name"`
+	Description string `json:"description,omitempty"`
+	BackupIp    string `json:"backupIp,omitempty"`
+	MultiPeriod bool   `json:"multiPeriod,omitempty"`
+	Url         string `json:"url"`
+	Type        string `json:"type"`
+	Origin      Origin `json:"origin"`
 }
 
 type Origin struct {
