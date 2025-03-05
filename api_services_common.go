@@ -78,9 +78,10 @@ type GapFiller struct {
 }
 
 type TranscodingProfile struct {
-	Name    string `json:"name"`
-	Content string `json:"content"`
-	Id      uint   `json:"id"`
+	Name       string `json:"name"`
+	Content    string `json:"content"`
+	InternalId string `json:"internal_id"`
+	Id         uint   `json:"id"`
 }
 
 type LiveAdPreRollOutput struct {
