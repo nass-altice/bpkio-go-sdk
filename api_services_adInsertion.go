@@ -20,14 +20,16 @@ type CreateAdInsertionInput struct {
 }
 
 type UpdateAdInsertionInput struct {
-	Name                 string                `json:"name,omitempty"` //required
+	Name                 string                `json:"name,omitempty"`
 	EnvTags              []string              `json:"environmentTags,omitempty"`
 	LiveAdPreRoll        *LiveAdPreRoll        `json:"liveAdPreRoll,omitempty"`
 	LiveAdReplacement    *LiveAdReplacement    `json:"liveAdReplacement,omitempty"`
 	VodAdInsertion       *VodAdInsertion       `json:"vodAdInsertion,omitempty"`
 	TranscodingProfile   *Identifiable         `json:"transcodingProfile,omitempty"`
+	AdvancedOptions      *AdvancedOptions      `json:"advancedOptions,omitempty"`
 	EnableAdTranscoding  bool                  `json:"enableAdTranscoding,omitempty"`
 	ServerSideAdTracking *ServerSideAdTracking `json:"serverSideAdTracking,omitempty"`
+	Source               *Identifiable         `json:"source,omitempty"`
 }
 
 type AuthorizationHeader struct {
