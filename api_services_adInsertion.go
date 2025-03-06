@@ -13,6 +13,7 @@ type CreateAdInsertionInput struct {
 	LiveAdReplacement    *LiveAdReplacement    `json:"liveAdReplacement,omitempty"`
 	VodAdInsertion       *VodAdInsertion       `json:"vodAdInsertion,omitempty"`
 	TranscodingProfile   *Identifiable         `json:"transcodingProfile,omitempty"`
+	AdvancedOptions      *AdvancedOptions      `json:"advancedOptions,omitempty"`
 	EnableAdTranscoding  bool                  `json:"enableAdTranscoding,omitempty"`
 	ServerSideAdTracking *ServerSideAdTracking `json:"serverSideAdTracking,omitempty"`
 	Source               *Identifiable         `json:"source,omitempty"` //required
