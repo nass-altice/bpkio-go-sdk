@@ -43,14 +43,14 @@ type AdInsertionOutput struct {
 	Tags                 []string                `json:"tags,omitempty"`
 	Type                 string                  `json:"type"`
 	State                string                  `json:"state"`
-	LiveAdPreRoll        LiveAdPreRollOutput     `json:"liveAdPreRoll"`
-	LiveAdReplacement    LiveAdReplacementOutput `json:"liveAdReplacement"`
-	VodAdInsertion       VodAdInsertionOutput    `json:"vodAdInsertion"`
-	TranscodingProfile   TranscodingProfile      `json:"transcodingProfile"`
-	EnableAdTranscoding  bool                    `json:"enableAdTranscoding"`
-	ServerSideAdTracking ServerSideAdTracking    `json:"serverSideAdTracking"`
-	AdvancedOptions      AdvancedOptions         `json:"advancedOptions"`
-	Source               Source                  `json:"source"`
+	LiveAdPreRoll        LiveAdPreRollOutput     `json:"liveAdPreRoll,omitempty"`
+	LiveAdReplacement    LiveAdReplacementOutput `json:"liveAdReplacement,omitempty"`
+	VodAdInsertion       VodAdInsertionOutput    `json:"vodAdInsertion,omitempty"`
+	TranscodingProfile   TranscodingProfile      `json:"transcodingProfile,omitempty"`
+	EnableAdTranscoding  bool                    `json:"enableAdTranscoding,omitempty"`
+	ServerSideAdTracking ServerSideAdTracking    `json:"serverSideAdTracking,omitempty"`
+	AdvancedOptions      AdvancedOptions         `json:"advancedOptions,omitempty"`
+	Source               Source                  `json:"source,omitempty"`
 	Id                   uint                    `json:"id"`
 	CreationDate         string                  `json:"creationDate"`
 	UpdateDate           string                  `json:"updateDate"`
