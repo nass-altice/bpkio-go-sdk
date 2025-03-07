@@ -8,7 +8,7 @@ import (
 
 type CreateAdInsertionInput struct {
 	Name                 string                `json:"name,omitempty"` //required
-	EnvTags              []string              `json:"environmentTags,omitempty"`
+	Tags                 []string              `json:"tags,omitempty"`
 	LiveAdPreRoll        *LiveAdPreRoll        `json:"liveAdPreRoll,omitempty"`
 	LiveAdReplacement    *LiveAdReplacement    `json:"liveAdReplacement,omitempty"`
 	VodAdInsertion       *VodAdInsertion       `json:"vodAdInsertion,omitempty"`
@@ -21,7 +21,7 @@ type CreateAdInsertionInput struct {
 
 type UpdateAdInsertionInput struct {
 	Name                 string                `json:"name,omitempty"`
-	EnvTags              []string              `json:"environmentTags,omitempty"`
+	Tags                 []string              `json:"tags,omitempty"`
 	LiveAdPreRoll        *LiveAdPreRoll        `json:"liveAdPreRoll,omitempty"`
 	LiveAdReplacement    *LiveAdReplacement    `json:"liveAdReplacement,omitempty"`
 	VodAdInsertion       *VodAdInsertion       `json:"vodAdInsertion,omitempty"`
